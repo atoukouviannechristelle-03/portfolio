@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portfolio d’Anne-Christelle ATOUKOUVI, étudiante en L2 Computer Science à l’IIT.">
+  <title>Anne-Christelle ATOUKOUVI | Mon Portfolio</title>
+  <script>document.documentElement.classList.add("js");setTimeout(function(){document.documentElement.classList.add("pret")},9000)</script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700;800&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style type="text/tailwindcss">
+    @theme { --color-nuit:#fffdf8; --color-nuit2:#f6efdc; --color-or:#8a6d12; --color-ivoire:#1c1917; }
+  </style>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body class="bg-nuit text-ivoire">
+
+<div id="chargeur" role="status" aria-live="polite">
+  <div class="compteur"><span id="pourcent">0</span><small>%</small></div>
+  <div class="barre"><i id="barre"></i></div>
+  <p>Chargement du portfolio…</p>
+</div>
+
+<header id="entete" class="fixed top-0 inset-x-0 z-50 bg-nuit/90 backdrop-blur transition-shadow">
+  <div class="max-w-6xl mx-auto px-4 h-16 flex items-center justify-between">
+    <a href="#accueil" class="text-xl font-bold tracking-wide">A<span class="text-or">.</span>C<span class="text-or">.</span>A</a>
+    <button id="menu-btn" class="md:hidden text-3xl" aria-label="Ouvrir le menu" aria-expanded="false">&#9776;</button>
+    <nav id="menu" aria-label="Navigation principale" class="hidden md:block absolute md:static left-0 right-0 top-16 bg-nuit md:bg-transparent">
+      <ul class="flex flex-col md:flex-row gap-1 md:gap-8 p-4 md:p-0">
+        <li><a class="lien block py-2" href="#accueil">Accueil</a></li>
+        <li><a class="lien block py-2" href="#cv">CV</a></li>
+        <li><a class="lien block py-2" href="#projets">Projets</a></li>
+        <li><a class="lien block py-2" href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main>
+  <section id="accueil" class="hero-fond relative overflow-hidden min-h-screen flex items-center pt-20 pb-12">
+    <div class="max-w-6xl mx-auto px-4 w-full grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1 text-center md:text-left">
+        <div class="etiquette anim a0"><i class="p" style="left:0;top:0"></i><i class="p" style="left:0;top:50%"></i><i class="p" style="left:0;top:100%"></i><i class="p" style="left:50%;top:0"></i><i class="p" style="left:50%;top:100%"></i><i class="p" style="left:100%;top:0"></i><i class="p" style="left:100%;top:50%"></i><i class="p" style="left:100%;top:100%"></i><b>PORTFOLIO</b></div>
+        <h1 class="nom anim a1">Anne-Christelle<br><span class="degrade">ATOUKOUVI</span></h1>
+        <p class="sous-titre anim a2">Étudiante en Computer Science</p>
+        <p class="anim a3 mt-5 text-stone-700 max-w-md mx-auto md:mx-0">Passionnée par le numérique et le développement informatique, je construis progressivement mes compétences à travers mes projets et mes apprentissages.</p>
+      </div>
+      <div class="order-1 md:order-2 flex justify-center">
+        <div class="relative w-44 sm:w-48 md:w-56 lg:w-60">
+          <div class="fils" aria-hidden="true"></div>
+          <div class="orbite" aria-hidden="true"></div>
+          <img class="photo-hero" src="photo.jpg" alt="Portrait d’Anne-Christelle ATOUKOUVI" width="400" height="533">
+          <div class="points" aria-hidden="true"><i></i><i></i><i></i></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="cv" class="py-20 bg-nuit2">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="titre-cv reveal">Curriculum Vitae</h2>
+
+      <div class="banniere reveal mt-8">
+        <div class="relative w-full p-6 md:p-10 flex flex-col gap-6 md:max-w-md">
+          <div>
+            <p class="text-or uppercase tracking-widest text-sm">Anne-Christelle ATOUKOUVI</p>
+            <p class="text-2xl md:text-3xl font-bold mt-2 max-w-md">Étudiante en L2 Computer Science à l’IIT</p>
+            <p class="text-stone-700 mt-2 max-w-md">Apprendre, créer, innover et transformer des idées en solution numérique </p>
+          </div>
+          <nav class="ovale" aria-label="Raccourcis">
+            <a href="#projets">Voir mes projets</a>
+            <a href="#competences">Mes compétences</a>
+            <a href="#personnalite">Ma personnalité</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="mt-10 grid md:grid-cols-2 gap-8">
+        <article class="carte boite reveal">
+          <h3 class="sous-titre-cv">Parcours scolaire</h3>
+          <ol class="parcours mt-6">
+            <li><span class="pt"></span><p class="font-semibold">BEPC</p><p class="text-sm text-stone-600">Collège Saint Expert, Port-Bouët</p></li>
+            <li><span class="pt"></span><p class="font-semibold">Baccalauréat série D</p><p class="text-sm text-stone-600">Collège privé La Vision Future</p></li>
+            <li><span class="pt"></span><p class="font-semibold">Licence 1 Computer Science</p><p class="text-sm text-stone-600">Institut Ivoirien de Technologie (IIT)</p></li>
+            <li><span class="pt"></span><p class="font-semibold">Licence 2 Computer Science</p><p class="text-sm text-stone-600">Institut Ivoirien de Technologie (IIT) · en cours</p></li>
+          </ol>
+        </article>
+        <article class="carte boite reveal">
+          <div id="competences" class="ancre"><h3 class="sous-titre-cv">Compétences</h3>
+            <p class="mt-4 puce-g">🌍 LANGUE <span>Une bonne maitrise de l'anglais</span></p>
+            <ul class="flex flex-wrap gap-2 mt-4"><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">Python</li><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">Java</li><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">Bases de données</li><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">Web scraping</li></ul></div>
+          <div id="personnalite" class="ancre mt-8"><h3 class="sous-titre-cv">Personnalité</h3>
+            <p class="mt-4 puce-g">🎯 Sens des responsabilités <span>Je prends mes engaments au serieux</span></p>
+            <p class="mt-3 puce-g">🤝 Esprit d’équipe <span>J’apprecie la collaboration et le partage d'idée</span></p></div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="projets" class="py-20 bg-nuit2">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="text-3xl md:text-4xl font-bold reveal">Mes <span class="degrade">projets</span></h2>
+      <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <article class="carte reveal border border-amber-200 rounded-xl p-6 bg-nuit">
+          <p class="text-or text-4xl font-bold">01</p>
+          <h3 class="text-xl font-semibold mt-2">Recherche de professeurs à domicile</h3>
+          <p class="mt-2 text-stone-600">Application qui permet de trouver un professeur à domicile et de le contacter facilement.</p>
+          <ul class="flex flex-wrap gap-2 mt-3"><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">Application</li><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">Recherche</li></ul>
+        </article>
+        <article class="carte reveal border border-amber-200 rounded-xl p-6 bg-nuit">
+          <p class="text-or text-4xl font-bold">02</p>
+          <h3 class="text-xl font-semibold mt-2">Gestion d’étudiants</h3>
+          <p class="mt-2 text-stone-600">Solution de gestion d’étudiants : inscriptions, cours et suivi, avec une base de données.</p>
+          <ul class="flex flex-wrap gap-2 mt-3"><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">SQL Server</li><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">Gestion</li></ul>
+        </article>
+        <article class="carte reveal border border-amber-200 rounded-xl p-6 bg-nuit">
+          <p class="text-or text-4xl font-bold">03</p>
+          <h3 class="text-xl font-semibold mt-2">BiblioIIT</h3>
+          <p class="mt-2 text-stone-600">Application console de gestion de bibliothèque : recherche, emprunt, retour et retards.</p>
+          <ul class="flex flex-wrap gap-2 mt-3"><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">Python</li><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">SQLite</li><li class="puce px-3 py-1 rounded-full bg-nuit2 text-or text-sm">pytest</li></ul>
+        </article>
+      </div>
+    </div>
+  </section>
+<section id="contact" class="py-20">
+    <div class="max-w-6xl mx-auto px-4">
+      <h2 class="titre-cv reveal">Contacts</h2>
+      <ul class="mt-10 grid md:grid-cols-3 gap-4">
+        <li class="reveal"><a class="carte boite flex items-center justify-between break-words" href="mailto:atoukouviannechristelle@gmail.com">✉️ E-mail <span class="fleur">✿</span></a></li>
+        <li class="reveal"><a class="carte boite flex items-center justify-between" href="https://github.com/atoukouviannechristelle-03">🐙 GitHub <span class="fleur">✿</span></a></li>
+        <li class="reveal"><a class="carte boite flex items-center justify-between" href="tel:+2250161232326">📞 +225 01 61 23 23 26 <span class="fleur">✿</span></a></li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-nuit2 border-t border-amber-200">
+  <div class="max-w-6xl mx-auto px-4 py-6 flex flex-wrap justify-between gap-2 text-stone-600">
+    <p>&copy; 2026 Anne-Christelle ATOUKOUVI</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
